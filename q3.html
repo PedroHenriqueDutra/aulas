@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <style>
+        input {
+            max-width: 100px;
+            padding: 2px;
+        }
+    </style>
+    <script>
+        function calcu() {
+            let diat = 0,
+                tipo = 0,
+                val = 0,
+                sub = 0,
+                consumo = 0,
+                numd = 0;
+            numd = document.querySelector("#numd").value
+            tipo = document.querySelector("#apart").value
+            consumo = document.querySelector("#")
+            if (tipo == a || tipo == A) {
+                val = 150;
+            } else {
+                if (tipo == b || tipo == B) {
+                    val = 100
+                } else {
+                    if (tipo == c || tipo == C) {
+                        val = 75
+                    } else {
+                        if (tipo == d || tipo == D) {
+                            val = 150
+                        }
+                    }
+
+                }
+            }
+            diat = numd * val;
+            sub = diat + consumo
+
+        }
+    </script>
+</head>
+
+<body>
+    Os preços do tipo dos quartos é: <br> TIPO DO APTO – VALOR DA DIÁRIA (R$)
+    <br> A – 150.00 <br> B – 100.00 <br> C – 75.00 <br> D – 150.00
+    <form action="JavaScript">
+        <div>digite o nome do hóspede <input type="text" id="name"></div><br>
+        <div>digite o tipo de apartamento utilizado (A, B, C ou D) <input type="text" id="apart"></div><br>
+        <div>digite o número de diárias usadas pelo hóspede <input type="text" id="numd"></div><br>
+        <div>digite o valor fdo consumo <input type="text" id="consum"></div>
+        <div><input type="button" value="submit" onclick=" calc()"></div>
+
+
+
+    </form>
+</body>
+
+</html>

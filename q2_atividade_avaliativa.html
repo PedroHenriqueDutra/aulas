@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function classifacao() {
+            let idade = 0;
+            idade = parseInt(document.querySelector("#idade").value)
+            if (idade >= 5 && idade <= 7) {
+                document.write("<p>O narrador pertence a categoria infantil A </p>")
+            } else {
+                if (idade <= 11) {
+                    document.write("<p>O narrador pertence a categoria infantil B </p>")
+                } else {
+                    if (idade <= 13) {
+                        document.write("<p>O narrador pertence a categoria juvenil A </p>")
+                    } else {
+                        if (idade <= 17) {
+                            document.write("<p>O narrador pertence a categoria juvenil B </p>")
+                        } else {
+                            if (idade >= 18) {
+                                document.write("<p>O narrador pertence a categoria adulto </p>")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="JavaScript:;">
+        Digite a idade do narrador: <input type="text" id="idade">
+        <input type="button" value="submit" onclick="classifacao()">
+    </form>
+</body>
+
+</html>

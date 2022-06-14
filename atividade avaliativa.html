@@ -9,7 +9,21 @@
 </head>
 
 <body>
-    <
+    <script>
+        function calculo() {
+            var pfabr = 0,
+                plucro = 0,
+                vimp = 0,
+                pfinal = 0;
+            pfabr = parseInt(document.querySelector('#pfabr').value);
+            plucro = parseInt(document.querySelector('#plucro').value);
+            vimp = parseInt(document.querySelector('#pimp').value);
+            plucro = pfabr * (plucro / 100);
+            vimp = pfabr * (vimp / 100);
+            pfinal = (pfabr + plucro + vimp)
+            document.write("<p>O valor de lucro do distribuidor é:</p>", plucro, "<br> <p>o valor correspondendo aos imposros é:</p><br>", vimp, "<p>O preço final do veículo é: </p><br>", pfinal)
+        }
+    </script>
     <form action="JavaScript:;">
         digite o preço de fabrica: <input type="text" id="pfabr" value="">
         <br> digite o percentual de lucro : <input type="text" id="plucro" value="">

@@ -1,3 +1,4 @@
+
 import requests
 from bs4 import  BeautifulSoup
 req = requests.get('https://ge.globo.com/esports/lol/noticia/2022/02/18/campeoes-do-lol-lista-completa-de-personagens-e-funcoes.ghtml')
@@ -10,22 +11,12 @@ if req.status_code == 200:
             co = []
 
             for b in table:
-                print('<li>', b.text, '</li>')
+                d=str(b)
+                d=d.replace('<td>','<div>')
+                d=d.replace('</td>','</div> \n')
+                print('<div>', d, '</div>')
                 co.append(b.text)
-            for k in co:
-                k=str(k).strip().lower().replace("'","").replace(" ","")
-                link='https://universe.leagueoflegends.com/pt_BR/story/champion/{}/'.format(k)
-                req2=requests.get(link)
-                print(co)
-                print(link)
-
-                content2 = req2.content
-                soup2 = BeautifulSoup(content2, 'html.parser')
-                table2 = soup2.findAll(property='og:description')
-
-                print('Os ultimos mangás que sairam hoje  no site https://www.supermangas.site/ são :\n')
-                for c in table2:
-                    print('<li>', c, '</li>')
+            print(table)
 
 
 

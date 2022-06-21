@@ -1,5 +1,7 @@
 import time
 
+import time
+
 import requests
 from bs4 import  BeautifulSoup
 req = requests.get('https://www.leagueoflegends.com/pt-br/champions/')
@@ -15,7 +17,7 @@ if req.status_code == 200:
                 print('<li>', b.text, '</li>')
                 co.append(b.text)
             for k in co:
-                k=str(k).strip().lower().replace("'","")
+                k=str(k).strip().lower().replace("'","").replace(" ","")
                 link='https://universe.leagueoflegends.com/pt_BR/story/champion/{}/'.format(k)
                 req2=requests.get(link)
                 print(co)
@@ -34,3 +36,4 @@ if req.status_code == 200:
 
 else:
             print('erro')
+
